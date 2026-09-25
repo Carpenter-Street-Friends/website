@@ -26,8 +26,8 @@
       <nav aria-label="Main">
         <ul>
           <li><a href="#events">Events</a></li>
-          <li><a href="#neighborhood">The block</a></li>
           <li><a href="#resources">Philly resources</a></li>
+          <li><a href="#neighborhood">The block</a></li>
           <li><a href="#connect">Get in touch</a></li>
         </ul>
       </nav>
@@ -36,22 +36,23 @@
 
   <main id="top">
     <section class="hero">
-      <div class="wrap hero-grid">
+      <div class="hero-art" aria-hidden="true">
+        <img src="assets/img/carpenter-street.jpg" width="600" height="800" alt="">
+      </div>
+      <div class="wrap hero-inner">
         <div class="hero-copy">
           <p class="eyebrow">The 1500 block · Philadelphia</p>
-          <h1 class="wordmark"><span>Carp</span> <span>Street</span></h1>
-          <p class="lede">A community resource for Carpenter Street neighbors &amp; friends: block events, clean-ups, town halls and the city info every neighbor needs.</p>
+          <div class="monogram" aria-hidden="true">
+            <span>C</span><span>R</span><span>P</span>
+            <span>S</span><span>T</span><span>R</span>
+          </div>
+          <h1 class="wordmark">Carp Street</h1>
           <div class="actions">
             <a class="button" href="mailto:hello@carpenterstreetphilly.com">Email us</a>
             <!-- TODO: replace # with the Slack invite link -->
             <a class="button secondary" href="#">Join our Slack</a>
           </div>
         </div>
-        <figure class="hero-photo">
-          <span class="hero-circle" aria-hidden="true"></span>
-          <img src="assets/img/carpenter-street.jpg" width="768" height="1024"
-               alt="Tree-lined sidewalk on Carpenter Street with brick rowhomes, front steps and planters on a sunny day">
-        </figure>
       </div>
     </section>
 
@@ -106,82 +107,6 @@
       </div>
     </section>
 
-    <section id="neighborhood" class="section">
-      <div class="wrap">
-        <h2>The block</h2>
-        <p class="section-lede">We're the 1500 block of Carpenter Street, between 15th and 16th Streets, a couple of blocks west of Broad.</p>
-        <figure class="block-map">
-          <div class="map-scroll" tabindex="0" aria-label="Block map, scroll sideways on small screens">
-          <svg viewBox="0 0 800 440" role="img" aria-labelledby="map-title map-desc">
-            <title id="map-title">Map of the 1500 block of Carpenter Street</title>
-            <desc id="map-desc">Stylized street map: Carpenter Street runs east to west between Christian Street and Washington Avenue. The 1500 block, between South 16th and South 15th Streets, is highlighted, two blocks west of Broad Street.</desc>
-
-            <!-- city blocks -->
-            <g class="m-blocks">
-              <rect x="0" y="0" width="800" height="440"/>
-            </g>
-            <!-- minor streets -->
-            <g class="m-minor">
-              <line x1="0" y1="150" x2="800" y2="150"/>
-              <line x1="0" y1="270" x2="800" y2="270"/>
-              <line x1="0" y1="395" x2="800" y2="395"/>
-              <line x1="210" y1="0" x2="210" y2="440"/>
-              <line x1="390" y1="0" x2="390" y2="440"/>
-              <line x1="560" y1="0" x2="560" y2="440"/>
-              <line x1="700" y1="0" x2="700" y2="440"/>
-              <line x1="40" y1="0" x2="40" y2="440"/>
-            </g>
-            <!-- main streets -->
-            <g class="m-street">
-              <line x1="0" y1="90" x2="800" y2="90"/>
-              <line x1="0" y1="210" x2="800" y2="210"/>
-              <line x1="120" y1="0" x2="120" y2="440"/>
-              <line x1="300" y1="0" x2="300" y2="440"/>
-              <line x1="480" y1="0" x2="480" y2="440"/>
-              <line x1="760" y1="0" x2="760" y2="440"/>
-            </g>
-            <g class="m-avenue">
-              <line x1="0" y1="330" x2="800" y2="330"/>
-              <line x1="630" y1="0" x2="630" y2="440"/>
-            </g>
-
-            <!-- rowhomes along the 1500 block -->
-            <g class="m-homes">
-              <rect x="310" y="178" width="14" height="18"/><rect x="327" y="178" width="14" height="18"/><rect x="344" y="178" width="14" height="18"/><rect x="361" y="178" width="14" height="18"/><rect x="378" y="178" width="14" height="18"/><rect x="395" y="178" width="14" height="18"/><rect x="412" y="178" width="14" height="18"/><rect x="429" y="178" width="14" height="18"/><rect x="446" y="178" width="14" height="18"/>
-              <rect x="310" y="224" width="14" height="18"/><rect x="327" y="224" width="14" height="18"/><rect x="344" y="224" width="14" height="18"/><rect x="361" y="224" width="14" height="18"/><rect x="378" y="224" width="14" height="18"/><rect x="395" y="224" width="14" height="18"/><rect x="412" y="224" width="14" height="18"/><rect x="429" y="224" width="14" height="18"/><rect x="446" y="224" width="14" height="18"/>
-            </g>
-
-            <!-- the 1500 block -->
-            <line class="m-highlight" x1="300" y1="210" x2="480" y2="210"/>
-            <circle class="m-dot" cx="300" cy="210" r="7"/>
-            <circle class="m-dot" cx="480" cy="210" r="7"/>
-
-            <!-- labels -->
-            <g class="m-label">
-              <text x="10" y="82">Christian St</text>
-              <text x="10" y="202">Carpenter St</text>
-              <text x="10" y="322">Washington Ave</text>
-              <text x="127" y="430">S 17th</text>
-              <text x="307" y="430">S 16th</text>
-              <text x="487" y="430">S 15th</text>
-              <text x="638" y="430">S Broad</text>
-              <text x="753" y="430" text-anchor="end">S 13th</text>
-            </g>
-            <text class="m-big" x="390" y="140" text-anchor="middle">1500</text>
-            <text class="m-tag" x="390" y="280" text-anchor="middle">OUR BLOCK</text>
-
-            <!-- north arrow -->
-            <g class="m-north" transform="translate(760 40)">
-              <path d="M0 -18 L8 8 L0 3 L-8 8 Z"/>
-              <text y="26" text-anchor="middle">N</text>
-            </g>
-          </svg>
-          </div>
-          <figcaption>Not to scale. <a href="https://www.openstreetmap.org/?mlat=39.9388&amp;mlon=-75.1683#map=17/39.9388/-75.1683">Open in a real map →</a></figcaption>
-        </figure>
-      </div>
-    </section>
-
     <section id="resources" class="section alt">
       <div class="wrap">
         <h2>All things Philly</h2>
@@ -220,13 +145,147 @@
       </div>
     </section>
 
+    <section id="neighborhood" class="section">
+      <div class="wrap">
+        <h2>The block</h2>
+        <p class="section-lede">We're the 1500 block of Carpenter Street, between 15th and 16th Streets, a couple of blocks west of Broad.</p>
+        <figure class="block-map">
+          <div class="map-scroll" tabindex="0" aria-label="Block map, scroll sideways on small screens">
+          <svg viewBox="0 0 800 480" role="img" aria-labelledby="map-title map-desc">
+            <title id="map-title">Map of the 1500 block of Carpenter Street</title>
+            <desc id="map-desc">Old-style street map: Carpenter Street runs east to west between Christian Street and Washington Avenue. The 1500 block, between South 16th and South 15th Streets, is highlighted in green, two blocks west of Broad Street.</desc>
+            <defs>
+              <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                <line x1="0" y1="0" x2="0" y2="6" stroke="#4a3a26" stroke-width="0.9" stroke-opacity="0.28"/>
+              </pattern>
+              <pattern id="hatch-green" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                <rect width="4" height="4" fill="#cfe0c7"/>
+                <line x1="0" y1="0" x2="0" y2="4" stroke="#2e6437" stroke-width="1.4"/>
+              </pattern>
+              <filter id="paper" x="0" y="0" width="100%" height="100%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="7" result="n"/>
+                <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.29  0 0 0 0 0.22  0 0 0 0 0.12  0 0 0 0.16 0"/>
+                <feComposite in2="SourceGraphic" operator="in"/>
+              </filter>
+              <radialGradient id="age" cx="50%" cy="50%" r="75%">
+                <stop offset="60%" stop-color="#e6d3a8" stop-opacity="0"/>
+                <stop offset="100%" stop-color="#b89a62" stop-opacity="0.45"/>
+              </radialGradient>
+            </defs>
+
+            <!-- paper -->
+            <rect width="800" height="480" fill="#efe3c4"/>
+            <rect x="16" y="16" width="768" height="448" fill="url(#hatch)"/>
+
+            <!-- minor streets -->
+            <g stroke-linecap="butt">
+              <g stroke="#4a3a26" stroke-width="7">
+                <line x1="16" y1="170" x2="784" y2="170"/><line x1="16" y1="290" x2="784" y2="290"/><line x1="16" y1="410" x2="784" y2="410"/>
+                <line x1="210" y1="16" x2="210" y2="464"/><line x1="390" y1="16" x2="390" y2="464"/><line x1="555" y1="16" x2="555" y2="464"/><line x1="700" y1="16" x2="700" y2="464"/><line x1="46" y1="16" x2="46" y2="464"/>
+              </g>
+              <g stroke="#efe3c4" stroke-width="5">
+                <line x1="16" y1="170" x2="784" y2="170"/><line x1="16" y1="290" x2="784" y2="290"/><line x1="16" y1="410" x2="784" y2="410"/>
+                <line x1="210" y1="16" x2="210" y2="464"/><line x1="390" y1="16" x2="390" y2="464"/><line x1="555" y1="16" x2="555" y2="464"/><line x1="700" y1="16" x2="700" y2="464"/><line x1="46" y1="16" x2="46" y2="464"/>
+              </g>
+              <!-- main streets -->
+              <g stroke="#4a3a26" stroke-width="18">
+                <line x1="16" y1="110" x2="784" y2="110"/><line x1="16" y1="230" x2="784" y2="230"/>
+                <line x1="120" y1="16" x2="120" y2="464"/><line x1="300" y1="16" x2="300" y2="464"/><line x1="480" y1="16" x2="480" y2="464"/><line x1="760" y1="16" x2="760" y2="464"/>
+              </g>
+              <g stroke="#efe3c4" stroke-width="15">
+                <line x1="16" y1="110" x2="784" y2="110"/><line x1="16" y1="230" x2="784" y2="230"/>
+                <line x1="120" y1="16" x2="120" y2="464"/><line x1="300" y1="16" x2="300" y2="464"/><line x1="480" y1="16" x2="480" y2="464"/><line x1="760" y1="16" x2="760" y2="464"/>
+              </g>
+              <!-- avenues -->
+              <g stroke="#4a3a26" stroke-width="27"><line x1="16" y1="350" x2="784" y2="350"/><line x1="630" y1="16" x2="630" y2="464"/></g>
+              <g stroke="#efe3c4" stroke-width="24"><line x1="16" y1="350" x2="784" y2="350"/><line x1="630" y1="16" x2="630" y2="464"/></g>
+            </g>
+
+            <!-- the 1500 block -->
+            <g fill="url(#hatch-green)" stroke="#2e6437" stroke-width="0.9">
+              <rect x="304.0" y="200" width="15" height="20"/>
+              <rect x="304.0" y="240" width="15" height="20"/>
+              <rect x="321.4" y="200" width="15" height="20"/>
+              <rect x="321.4" y="240" width="15" height="20"/>
+              <rect x="338.8" y="200" width="15" height="20"/>
+              <rect x="338.8" y="240" width="15" height="20"/>
+              <rect x="356.2" y="200" width="15" height="20"/>
+              <rect x="356.2" y="240" width="15" height="20"/>
+              <rect x="373.6" y="200" width="15" height="20"/>
+              <rect x="373.6" y="240" width="15" height="20"/>
+              <rect x="391.0" y="200" width="15" height="20"/>
+              <rect x="391.0" y="240" width="15" height="20"/>
+              <rect x="408.4" y="200" width="15" height="20"/>
+              <rect x="408.4" y="240" width="15" height="20"/>
+              <rect x="425.8" y="200" width="15" height="20"/>
+              <rect x="425.8" y="240" width="15" height="20"/>
+              <rect x="443.2" y="200" width="15" height="20"/>
+              <rect x="443.2" y="240" width="15" height="20"/>
+              <rect x="460.6" y="200" width="15" height="20"/>
+              <rect x="460.6" y="240" width="15" height="20"/>
+            </g>
+            <line x1="291" y1="230" x2="489" y2="230" stroke="#2e6437" stroke-width="15"/>
+
+            <!-- street names -->
+            <g class="m-name" fill="#4a3a26">
+              <text x="200" y="114" text-anchor="middle">CHRISTIAN  ST.</text>
+              <text x="560" y="114" text-anchor="middle">CHRISTIAN  ST.</text>
+              <text x="200" y="234" text-anchor="middle">CARPENTER  ST.</text>
+              <text x="390" y="234" text-anchor="middle" fill="#f6f1e4">CARPENTER</text>
+              <text x="560" y="234" text-anchor="middle">CARPENTER  ST.</text>
+              <text x="220" y="354" text-anchor="middle" class="m-ave">WASHINGTON  AVENUE</text>
+              <text x="560" y="354" text-anchor="middle" class="m-ave">WASHINGTON  AVE.</text>
+              <text transform="translate(124 300) rotate(-90)" text-anchor="middle">SEVENTEENTH</text>
+              <text transform="translate(304 305) rotate(-90)" text-anchor="middle">SIXTEENTH</text>
+              <text transform="translate(484 305) rotate(-90)" text-anchor="middle">FIFTEENTH</text>
+              <text transform="translate(634 290) rotate(-90)" text-anchor="middle" class="m-ave">BROAD  STREET</text>
+              <text transform="translate(764 290) rotate(-90)" text-anchor="middle">THIRTEENTH</text>
+            </g>
+
+            <!-- big number -->
+            <text class="m-num" x="390" y="186" text-anchor="middle">1500</text>
+
+            <!-- cartouche -->
+            <g transform="translate(40 374)">
+              <rect width="232" height="80" fill="#efe3c4" stroke="#4a3a26" stroke-width="1.6"/>
+              <rect x="5" y="5" width="222" height="70" fill="none" stroke="#4a3a26" stroke-width="0.7"/>
+              <text class="m-cart-s" x="116" y="24" text-anchor="middle">PLAN OF THE</text>
+              <text class="m-cart-l" x="116" y="50" text-anchor="middle">1500 Block</text>
+              <text class="m-cart-s" x="116" y="67" text-anchor="middle">CARPENTER ST. · PHILADELPHIA</text>
+            </g>
+
+            <!-- compass rose -->
+            <g transform="translate(700 62)" class="m-rose">
+              <circle r="30" fill="#efe3c4" stroke="#4a3a26" stroke-width="1.2"/>
+              <circle r="24" fill="none" stroke="#4a3a26" stroke-width="0.6"/>
+              <path d="M0 -28 L5 -5 L0 0 Z" fill="#2e6437"/><path d="M0 -28 L-5 -5 L0 0 Z" fill="#1f4526"/>
+              <path d="M0 28 L5 5 L0 0 Z" fill="#4a3a26"/><path d="M0 28 L-5 5 L0 0 Z" fill="#efe3c4" stroke="#4a3a26" stroke-width="0.6"/>
+              <path d="M28 0 L5 5 L0 0 Z" fill="#4a3a26"/><path d="M28 0 L5 -5 L0 0 Z" fill="#efe3c4" stroke="#4a3a26" stroke-width="0.6"/>
+              <path d="M-28 0 L-5 -5 L0 0 Z" fill="#4a3a26"/><path d="M-28 0 L-5 5 L0 0 Z" fill="#efe3c4" stroke="#4a3a26" stroke-width="0.6"/>
+              <text y="-33" text-anchor="middle" class="m-n">N</text>
+            </g>
+
+            <!-- scale note -->
+            <text class="m-cart-s" x="760" y="452" text-anchor="end">NOT TO SCALE</text>
+
+            <!-- paper grain, aged edges, frame -->
+            <rect width="800" height="480" fill="#fff" filter="url(#paper)" style="mix-blend-mode:multiply"/>
+            <rect width="800" height="480" fill="url(#age)"/>
+            <rect x="8" y="8" width="784" height="464" fill="none" stroke="#4a3a26" stroke-width="2.2"/>
+            <rect x="16" y="16" width="768" height="448" fill="none" stroke="#4a3a26" stroke-width="0.8"/>
+          </svg>
+          </div>
+          <figcaption><a href="https://www.openstreetmap.org/?mlat=39.9388&amp;mlon=-75.1683#map=17/39.9388/-75.1683">Open in a real map →</a></figcaption>
+        </figure>
+      </div>
+    </section>
+
     <section id="connect" class="section">
       <div class="wrap"><div class="narrow">
         <h2>Get in touch</h2>
-        <p>Have an idea, a question or something the block should know about? Email us or join the conversation on Slack.</p>
+        <p>Have an idea, a question or something the block should know about? Email us anytime.</p>
         <div class="actions">
           <a class="button" href="mailto:hello@carpenterstreetphilly.com">hello@carpenterstreetphilly.com</a>
-          <a class="button secondary" href="#">Carpenter Street Slack</a>
         </div>
       </div></div>
     </section>

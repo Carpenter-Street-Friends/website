@@ -100,60 +100,75 @@ nav a { color: var(--muted); text-decoration: none; font-size: 0.95rem; }
 nav a:hover { color: var(--accent); }
 
 /* Hero */
-.hero { padding: 56px 0 64px; overflow: hidden; }
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 48px;
+.hero {
+  position: relative;
+  min-height: 520px;
+  display: flex;
   align-items: center;
+  overflow: hidden;
 }
+.hero-inner { position: relative; z-index: 1; width: 100%; padding-top: 64px; padding-bottom: 64px; }
+.hero-copy { max-width: 46%; }
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.12em;
   font-size: 0.8rem;
   font-weight: 600;
   color: var(--accent);
-  margin: 0 0 10px;
+  margin: 0 0 18px;
 }
+/* Stacked CRP / STR block */
+.monogram {
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-family: var(--display);
+  font-size: clamp(4.2rem, 10vw, 8.2rem);
+  line-height: 0.82;
+  text-align: center;
+  color: var(--text);
+  margin: 0 0 18px;
+}
+.monogram span { padding: 0 0.02em; }
+.monogram span:nth-child(n+4) { color: var(--accent); }
 .wordmark {
   font-family: var(--display);
   font-weight: 400;
   text-transform: uppercase;
-  font-size: clamp(3.6rem, 11vw, 7.5rem);
-  line-height: 0.86;
-  letter-spacing: -0.01em;
-  margin: 0 0 22px;
+  letter-spacing: 0.18em;
+  font-size: clamp(1.3rem, 2.6vw, 1.9rem);
+  line-height: 1.1;
+  margin: 0 0 28px;
 }
-.wordmark span { display: block; }
-.lede { font-size: 1.15rem; color: var(--muted); max-width: 46ch; margin: 0 0 26px; }
 
-.hero-photo {
-  position: relative;
-  margin: 0;
-  justify-self: end;
-  width: 100%;
-  max-width: 400px;
-}
-.hero-photo img {
-  position: relative;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  border-radius: 200px 200px var(--radius) var(--radius);
-  box-shadow: 0 18px 40px -20px rgba(0, 0, 0, 0.45);
-}
-.hero-circle {
+/* Street photo fading into the green dot field */
+.hero-art {
   position: absolute;
-  width: 62%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  top: -7%;
-  right: -12%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 52%;
+  border-radius: 320px 0 0 0;
+  overflow: hidden;
   background:
-    radial-gradient(circle at 30% 30%, rgba(255,255,255,0.10) 0 2px, transparent 3px) 0 0 / 14px 14px,
-    var(--accent);
-  opacity: 0.9;
+    radial-gradient(circle, rgba(255, 255, 255, 0.16) 1.6px, transparent 2.3px) 0 0 / 14px 14px,
+    #2e6437;
+}
+.hero-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 30% 68%;
+  filter: saturate(0.72) contrast(0.86) brightness(1.08) sepia(0.12);
+  -webkit-mask-image: linear-gradient(100deg, #000 30%, rgba(0,0,0,0.55) 52%, transparent 74%);
+          mask-image: linear-gradient(100deg, #000 30%, rgba(0,0,0,0.55) 52%, transparent 74%);
+}
+.hero-art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, rgba(46, 100, 55, 0.14), rgba(46, 100, 55, 0) 45%);
+  mix-blend-mode: multiply;
+  pointer-events: none;
 }
 
 .actions { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -224,33 +239,27 @@ h3 { font-size: 1.1rem; margin: 0 0 6px; }
 .past strong { color: var(--text); font-weight: 600; }
 .tagline { font-family: var(--display); color: var(--accent); white-space: nowrap; }
 
-/* Block map */
+/* Block map: old Philadelphia plan style */
 .block-map { margin: 0; }
-.map-scroll { overflow-x: auto; border-radius: var(--radius); }
-.block-map svg {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: var(--radius);
-  border: 1px solid var(--line);
+.map-scroll { overflow-x: auto; border-radius: 4px; box-shadow: 0 14px 30px -18px rgba(60, 40, 10, 0.55); }
+.block-map svg { width: 100%; height: auto; display: block; }
+.block-map figcaption { margin-top: 10px; font-size: 0.85rem; color: var(--muted); }
+.m-name text {
+  font: italic 600 9.5px Georgia, "Times New Roman", serif;
+  letter-spacing: 0.14em;
 }
-.block-map figcaption { margin-top: 8px; font-size: 0.85rem; color: var(--muted); }
-.m-blocks rect { fill: var(--map-bg); }
-.m-minor line { stroke: var(--map-minor); stroke-width: 5; }
-.m-street line { stroke: var(--map-street); stroke-width: 14; }
-.m-avenue line { stroke: var(--map-avenue); stroke-width: 22; }
-.m-homes rect { fill: var(--map-home); rx: 1.5; }
-.m-highlight { stroke: var(--accent); stroke-width: 16; stroke-linecap: round; }
-.m-dot { fill: var(--surface); stroke: var(--accent); stroke-width: 4; }
-.m-label text {
-  font: 600 13px system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  fill: var(--muted);
-  letter-spacing: 0.02em;
+.m-name .m-ave { font-size: 11px; }
+.m-num {
+  font-family: var(--display);
+  font-size: 74px;
+  fill: #2e6437;
+  stroke: #efe3c4;
+  stroke-width: 6px;
+  paint-order: stroke;
 }
-.m-big { font-family: var(--display); font-size: 92px; fill: var(--accent); opacity: 0.9; }
-.m-tag { font: 700 13px system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; letter-spacing: 0.3em; fill: var(--accent); }
-.m-north path { fill: var(--muted); }
-.m-north text { font: 700 12px system-ui, sans-serif; fill: var(--muted); }
+.m-cart-s { font: 600 8.5px Georgia, "Times New Roman", serif; letter-spacing: 0.22em; fill: #4a3a26; }
+.m-cart-l { font-family: var(--display); font-size: 24px; fill: #2e6437; }
+.m-n { font: 700 11px Georgia, serif; fill: #4a3a26; }
 
 /* Footer */
 .site-footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--muted); font-size: 0.9rem; }
@@ -260,10 +269,14 @@ h3 { font-size: 1.1rem; margin: 0 0 6px; }
 
 /* Small screens */
 @media (max-width: 760px) {
-  .hero { padding: 36px 0 48px; }
-  .hero-grid { grid-template-columns: 1fr; gap: 36px; }
-  .hero-photo { justify-self: center; max-width: 340px; margin-right: 24px; }
-  .hero-circle { right: -16%; }
+  .hero { flex-direction: column; align-items: stretch; min-height: 0; }
+  .hero-art { position: relative; width: 100%; height: 300px; border-radius: 0 0 0 160px; order: -1; }
+  .hero-art img {
+    -webkit-mask-image: linear-gradient(170deg, #000 35%, rgba(0,0,0,0.5) 60%, transparent 85%);
+            mask-image: linear-gradient(170deg, #000 35%, rgba(0,0,0,0.5) 60%, transparent 85%);
+  }
+  .hero-inner { padding-top: 28px; padding-bottom: 44px; }
+  .hero-copy { max-width: none; }
   .brand { font-size: 1.15rem; }
   nav ul { gap: 4px 14px; }
   nav a { font-size: 0.9rem; }
