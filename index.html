@@ -14,7 +14,7 @@
   <meta property="og:image" content="https://carpenterstreetphilly.com/assets/img/carpenter-street.jpg">
   <meta property="og:url" content="https://carpenterstreetphilly.com/">
   <link rel="preload" href="assets/fonts/abril-fatface-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=20260925f">
+  <link rel="stylesheet" href="styles.css?v=20260925g">
 </head>
 <body>
   <a class="announce" href="#news-october">
@@ -39,9 +39,6 @@
 
   <main id="top">
     <section class="hero">
-      <div class="hero-art" aria-hidden="true">
-        <img src="assets/img/carpenter-street.jpg" width="600" height="800" alt="">
-      </div>
       <div class="wrap hero-inner">
         <div class="hero-copy">
           <p class="eyebrow">The 1500 block · Philadelphia</p>
@@ -50,108 +47,7 @@
             <span aria-hidden="true">S</span><span aria-hidden="true">T</span><span aria-hidden="true">R</span>
           </h1>
         </div>
-      </div>
-    </section>
-
-    <section id="news" class="section">
-      <div class="wrap">
-        <h2>Block news</h2>
-        <div class="cards">
-          <!-- Copy this <article> for each new post. Newest first. Point the top banner at the newest post's id. -->
-          <article class="card" id="news-october">
-            <p class="meta"><time datetime="2026-09-25">September 25, 2026</time></p>
-            <h3>October get-together announced</h3>
-            <p>Shirah is hosting a block get-together in October: a chance to meet (or catch up with) neighbors, walk through the new site and talk about what we'd like the block to focus on. Date and details to follow.</p>
-          </article>
-          <article class="card">
-            <p class="meta"><time datetime="2026-09-24">September 24, 2026</time></p>
-            <h3>Our new website is here</h3>
-            <p>We've moved off the old Google site to a simpler home for block updates. Take a look around and tell us what you'd like to see here.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="events" class="section alt">
-      <div class="wrap">
-        <h2>Upcoming happenings</h2>
-        <ul class="events">
-          <li>
-            <div class="date"><span class="mo">Oct</span><span class="day small">TBD</span></div>
-            <div>
-              <h3>October get-together</h3>
-              <p class="meta">Hosted by Shirah · Details to follow</p>
-              <p>Meet your neighbors, see the new site, and share what you'd like the block to focus on.</p>
-            </div>
-          </li>
-          <li>
-            <div class="date"><span class="mo">Every</span><span class="day small">Month</span></div>
-            <div>
-              <h3>Monthly block clean-up</h3>
-              <p class="meta">Meet at 15th &amp; Carpenter</p>
-              <p>Being neighborly means helping keep our street tidy! We'll work our way down the block collecting trash. Bags are provided; bring your trash pickers and wear gloves.</p>
-            </div>
-          </li>
-          <li>
-            <div class="date"><span class="mo">Twice</span><span class="day small">a year</span></div>
-            <div>
-              <h3>Semi-annual town hall</h3>
-              <p>Would you like to voice concerns, make recommendations or organize events? Let's talk!</p>
-            </div>
-          </li>
-        </ul>
-
-        <h3 class="past-title">Past get-togethers</h3>
-        <ul class="past">
-          <li><strong>June 7, 2025 · Block get-together.</strong> An afternoon of food, conversation and community, hosted by neighbors. <span class="tagline">Come hungry. Leave happy.</span></li>
-          <li><strong>August 18, 2024 · Neighborhood Gathering.</strong> Food trucks, music, and craft and gift vendors at Carpenter &amp; S 15th Street.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="resources" class="section alt">
-      <div class="wrap">
-        <h2>All things Philly</h2>
-        <div class="grid">
-          <div class="tile">
-            <h3>Trash &amp; recycling</h3>
-            <p>Our pickup day: <strong>[Day]</strong>. Schedules, holiday delays and bulk items.</p>
-            <a href="https://www.phila.gov/departments/department-of-streets/sanitation/">City sanitation →</a>
-          </div>
-          <div class="tile">
-            <h3>17th Police District</h3>
-            <p>Our district's contacts, captain and PSA meetings.</p>
-            <a href="https://www.phillypolice.com/districts/17th-district/">17th District →</a>
-          </div>
-          <div class="tile">
-            <h3>City services</h3>
-            <p>Report potholes, broken streetlights, illegal dumping and more.</p>
-            <a href="https://www.phila.gov/philly311/">Philly311 →</a>
-          </div>
-          <div class="tile">
-            <h3>Philly happenings</h3>
-            <p>Events and things to do around the city.</p>
-            <a href="https://www.visitphilly.com/events/">Visit Philly events →</a>
-          </div>
-          <div class="tile">
-            <h3>Philly sports</h3>
-            <p>Birds, Phils, Sixers, Flyers, Union and more.</p>
-            <a href="https://www.visitphilly.com/sports/">Sports in Philly →</a>
-          </div>
-          <div class="tile">
-            <h3>Arts &amp; culture</h3>
-            <p>Free and low-cost arts events across the city.</p>
-            <a href="https://www.creativephl.org/oacce-calendar/">Creative Philadelphia calendar →</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="neighborhood" class="section">
-      <div class="wrap">
-        <h2>The block</h2>
-        <p class="section-lede">We're the 1500 block of Carpenter Street, between 15th &amp; 16th, one block from South Broad Street.</p>
-        <figure class="block-map">
+        <figure class="block-map" id="neighborhood">
           <div class="map-scroll" tabindex="0" aria-label="Block map, scroll sideways on small screens">
           <svg viewBox="0 0 800 480" role="img" aria-labelledby="map-title map-desc">
             <title id="map-title">Map of the 1500 block of Carpenter Street</title>
@@ -277,8 +173,102 @@
             <rect x="16" y="16" width="768" height="448" fill="none" stroke="#4a3a26" stroke-width="0.8"/>
           </svg>
           </div>
-          <figcaption><a href="https://www.google.com/maps/search/?api=1&amp;query=39.93938%2C-75.16898" target="_blank" rel="noopener">Open in Google Maps ↗</a></figcaption>
+          <figcaption>We're the 1500 block of Carpenter Street, between 15th &amp; 16th, one block from South Broad Street. <a href="https://www.google.com/maps/search/?api=1&amp;query=39.93938%2C-75.16898" target="_blank" rel="noopener">Open in Google Maps ↗</a></figcaption>
         </figure>
+      </div>
+    </section>
+
+    <section id="news" class="section">
+      <div class="wrap">
+        <h2>Block news</h2>
+        <div class="cards">
+          <!-- Copy this <article> for each new post. Newest first. Point the top banner at the newest post's id. -->
+          <article class="card" id="news-october">
+            <p class="meta"><time datetime="2026-09-25">September 25, 2026</time></p>
+            <h3>October get-together announced</h3>
+            <p>Shirah is hosting a block get-together in October: a chance to meet (or catch up with) neighbors, walk through the new site and talk about what we'd like the block to focus on. Date and details to follow.</p>
+          </article>
+          <article class="card">
+            <p class="meta"><time datetime="2026-09-24">September 24, 2026</time></p>
+            <h3>Our new website is here</h3>
+            <p>We've moved off the old Google site to a simpler home for block updates. Take a look around and tell us what you'd like to see here.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="events" class="section alt">
+      <div class="wrap">
+        <h2>Upcoming happenings</h2>
+        <ul class="events">
+          <li>
+            <div class="date"><span class="mo">Oct</span><span class="day small">TBD</span></div>
+            <div>
+              <h3>October get-together</h3>
+              <p class="meta">Hosted by Shirah · Details to follow</p>
+              <p>Meet your neighbors, see the new site, and share what you'd like the block to focus on.</p>
+            </div>
+          </li>
+          <li>
+            <div class="date"><span class="mo">Every</span><span class="day small">Month</span></div>
+            <div>
+              <h3>Monthly block clean-up</h3>
+              <p class="meta">Meet at 15th &amp; Carpenter</p>
+              <p>Being neighborly means helping keep our street tidy! We'll work our way down the block collecting trash. Bags are provided; bring your trash pickers and wear gloves.</p>
+            </div>
+          </li>
+          <li>
+            <div class="date"><span class="mo">Twice</span><span class="day small">a year</span></div>
+            <div>
+              <h3>Semi-annual town hall</h3>
+              <p>Would you like to voice concerns, make recommendations or organize events? Let's talk!</p>
+            </div>
+          </li>
+        </ul>
+
+        <h3 class="past-title">Past get-togethers</h3>
+        <ul class="past">
+          <li><strong>June 7, 2025 · Block get-together.</strong> An afternoon of food, conversation and community, hosted by neighbors. <span class="tagline">Come hungry. Leave happy.</span></li>
+          <li><strong>August 18, 2024 · Neighborhood Gathering.</strong> Food trucks, music, and craft and gift vendors at Carpenter &amp; S 15th Street.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="resources" class="section alt">
+      <div class="wrap">
+        <h2>All things Philly</h2>
+        <div class="grid">
+          <div class="tile">
+            <h3>Trash &amp; recycling</h3>
+            <p>Our pickup day: <strong>[Day]</strong>. Schedules, holiday delays and bulk items.</p>
+            <a href="https://www.phila.gov/departments/department-of-streets/sanitation/">City sanitation →</a>
+          </div>
+          <div class="tile">
+            <h3>17th Police District</h3>
+            <p>Our district's contacts, captain and PSA meetings.</p>
+            <a href="https://www.phillypolice.com/districts/17th-district/">17th District →</a>
+          </div>
+          <div class="tile">
+            <h3>City services</h3>
+            <p>Report potholes, broken streetlights, illegal dumping and more.</p>
+            <a href="https://www.phila.gov/philly311/">Philly311 →</a>
+          </div>
+          <div class="tile">
+            <h3>Philly happenings</h3>
+            <p>Events and things to do around the city.</p>
+            <a href="https://www.visitphilly.com/events/">Visit Philly events →</a>
+          </div>
+          <div class="tile">
+            <h3>Philly sports</h3>
+            <p>Birds, Phils, Sixers, Flyers, Union and more.</p>
+            <a href="https://www.visitphilly.com/sports/">Sports in Philly →</a>
+          </div>
+          <div class="tile">
+            <h3>Arts &amp; culture</h3>
+            <p>Free and low-cost arts events across the city.</p>
+            <a href="https://www.creativephl.org/oacce-calendar/">Creative Philadelphia calendar →</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -293,8 +283,7 @@
         </div>
         <div class="footer-contact">
           <h2>Get in touch</h2>
-          <p>Have an idea, a question or something the block should know about? Email us anytime.</p>
-          <a class="button" href="mailto:hello@carpenterstreetphilly.com">Email us</a>
+          <p class="footer-lead">Have an idea, a question or something the block should know about? Email us anytime. <a class="button" href="mailto:hello@carpenterstreetphilly.com">Reach out!</a></p>
           <p class="footer-legal">Carpenter Street Neighbors &amp; Friends · Philadelphia, PA</p>
         </div>
       </div>
