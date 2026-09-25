@@ -302,14 +302,30 @@ h3 { font-size: 1.1rem; margin: 0 0 6px; }
 }
 .footer-email:hover { filter: brightness(1.15); }
 .footer-contact .footer-lead { margin: 0; }
-.footer-lead .button { margin-left: 12px; padding: 8px 18px; vertical-align: middle; }
+.footer-lead .button {
+  margin-left: 16px;
+  padding: 13px 28px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  vertical-align: middle;
+  box-shadow: 0 8px 20px -8px rgba(46, 100, 55, 0.75), inset 0 -2px 0 rgba(0, 0, 0, 0.18);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.footer-lead .button::after { content: " →"; }
+.footer-lead .button:hover,
+.footer-lead .button:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px -10px rgba(46, 100, 55, 0.9), inset 0 -2px 0 rgba(0, 0, 0, 0.18);
+  filter: brightness(1.1);
+}
 .footer-contact .footer-legal { margin: 4px 0 0; font-size: 1rem; color: var(--muted); }
 
 /* Small screens */
 @media (max-width: 760px) {
   .hero { padding: 32px 0 44px; }
   .hero-inner { grid-template-columns: minmax(0, 1fr); gap: 28px; }
-  .footer-lead .button { margin: 12px 0 0; display: table; }
+  .footer-lead .button { margin: 14px 0 0; display: table; }
   .hero-copy { max-width: none; }
   .brand { font-size: 1.15rem; }
   nav ul { gap: 2px 16px; }
