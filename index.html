@@ -14,9 +14,12 @@
   <meta property="og:image" content="https://carpenterstreetphilly.com/assets/img/carpenter-street.jpg">
   <meta property="og:url" content="https://carpenterstreetphilly.com/">
   <link rel="preload" href="assets/fonts/abril-fatface-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=20260925e">
+  <link rel="stylesheet" href="styles.css?v=20260925f">
 </head>
 <body>
+  <a class="announce" href="#news-october">
+    <span class="announce-tag">New</span> October get-together announced <span aria-hidden="true">→</span>
+  </a>
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="#top" aria-label="Carp Street home">
@@ -54,7 +57,12 @@
       <div class="wrap">
         <h2>Block news</h2>
         <div class="cards">
-          <!-- Copy this <article> for each new post. Newest first. -->
+          <!-- Copy this <article> for each new post. Newest first. Point the top banner at the newest post's id. -->
+          <article class="card" id="news-october">
+            <p class="meta"><time datetime="2026-09-25">September 25, 2026</time></p>
+            <h3>October get-together announced</h3>
+            <p>Shirah is hosting a block get-together in October: a chance to meet (or catch up with) neighbors, walk through the new site and talk about what we'd like the block to focus on. Date and details to follow.</p>
+          </article>
           <article class="card">
             <p class="meta"><time datetime="2026-09-24">September 24, 2026</time></p>
             <h3>Our new website is here</h3>
@@ -69,10 +77,10 @@
         <h2>Upcoming happenings</h2>
         <ul class="events">
           <li>
-            <div class="date"><span class="mo">[Mon]</span><span class="day">[DD]</span></div>
+            <div class="date"><span class="mo">Oct</span><span class="day small">TBD</span></div>
             <div>
-              <h3>Block meeting</h3>
-              <p class="meta">[Time] · [Location]</p>
+              <h3>October get-together</h3>
+              <p class="meta">Hosted by Shirah · Details to follow</p>
               <p>Meet your neighbors, see the new site, and share what you'd like the block to focus on.</p>
             </div>
           </li>

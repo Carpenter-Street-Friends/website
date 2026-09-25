@@ -13,6 +13,7 @@ No build step, no frameworks. Open `index.html` in a browser to preview.
 
 - **News post:** copy an `<article class="card">` block in the News section and edit it. Newest first.
 - **Event:** copy an `<li>` in the Upcoming section.
+- **Top banner:** edit the `<a class="announce">` line at the top of `index.html`: change the text and point `href` at the newest post's `id` (e.g. `#news-october`).
 - Anything in `[brackets]` is a placeholder still to fill in.
 
 Then commit and push (or edit files directly on github.com):
