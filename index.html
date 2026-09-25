@@ -14,7 +14,7 @@
   <meta property="og:image" content="https://carpenterstreetphilly.com/assets/img/carpenter-street.jpg">
   <meta property="og:url" content="https://carpenterstreetphilly.com/">
   <link rel="preload" href="assets/fonts/abril-fatface-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=20260925c">
+  <link rel="stylesheet" href="styles.css?v=20260925d">
 </head>
 <body>
   <header class="site-header">
@@ -42,16 +42,10 @@
       <div class="wrap hero-inner">
         <div class="hero-copy">
           <p class="eyebrow">The 1500 block · Philadelphia</p>
-          <div class="monogram" aria-hidden="true">
-            <span>C</span><span>R</span><span>P</span>
-            <span>S</span><span>T</span><span>R</span>
-          </div>
-          <h1 class="wordmark">Carp Street</h1>
-          <div class="actions">
-            <a class="button" href="mailto:hello@carpenterstreetphilly.com">Email us</a>
-            <!-- TODO: replace # with the Slack invite link -->
-            <a class="button secondary" href="#">Join our Slack</a>
-          </div>
+          <h1 class="monogram" aria-label="Carp Street">
+            <span aria-hidden="true">C</span><span aria-hidden="true">R</span><span aria-hidden="true">P</span>
+            <span aria-hidden="true">S</span><span aria-hidden="true">T</span><span aria-hidden="true">R</span>
+          </h1>
         </div>
       </div>
     </section>
@@ -280,21 +274,22 @@
       </div>
     </section>
 
-    <section id="connect" class="section">
-      <div class="wrap"><div class="narrow">
-        <h2>Get in touch</h2>
-        <p>Have an idea, a question or something the block should know about? Email us anytime.</p>
-        <div class="actions">
-          <a class="button" href="mailto:hello@carpenterstreetphilly.com">hello@carpenterstreetphilly.com</a>
-        </div>
-      </div></div>
-    </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <span class="footer-mark">Carp Street</span>
-      <p>Carpenter Street Neighbors &amp; Friends · Philadelphia, PA · <a href="mailto:hello@carpenterstreetphilly.com">hello@carpenterstreetphilly.com</a></p>
+  <footer class="site-footer" id="connect">
+    <div class="wrap">
+      <div class="footer-main">
+        <div class="footer-mark" aria-hidden="true">
+          <span>C</span><span>R</span><span>P</span>
+          <span>S</span><span>T</span><span>R</span>
+        </div>
+        <div class="footer-contact">
+          <h2>Get in touch</h2>
+          <p>Have an idea, a question or something the block should know about? Email us anytime.</p>
+          <a class="footer-email" href="mailto:hello@carpenterstreetphilly.com">hello@carpenterstreetphilly.com</a>
+        </div>
+      </div>
+      <p class="footer-legal">Carpenter Street Neighbors &amp; Friends · Philadelphia, PA</p>
     </div>
   </footer>
   <script>

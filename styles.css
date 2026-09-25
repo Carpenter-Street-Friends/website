@@ -270,11 +270,43 @@ h3 { font-size: 1.1rem; margin: 0 0 6px; }
 .m-cart-l { font-family: var(--display); font-size: 24px; fill: #2e6437; }
 .m-n { font: 700 11px Georgia, serif; fill: #4a3a26; }
 
-/* Footer */
-.site-footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--muted); font-size: 0.9rem; }
-.footer-inner { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 20px; }
-.footer-mark { font-family: var(--display); text-transform: uppercase; font-size: 1.3rem; color: var(--text); }
-.site-footer p { margin: 0; }
+/* Footer (includes Get in touch) */
+.site-footer {
+  background: var(--bg-alt);
+  border-top: 4px solid var(--accent);
+  padding: 56px 0 28px;
+  color: var(--muted);
+}
+.footer-main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 32px 56px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--line);
+}
+.footer-mark {
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-family: var(--display);
+  font-size: 3.6rem;
+  line-height: 0.82;
+  text-align: center;
+  color: var(--text);
+}
+.footer-mark span:nth-child(n+4) { color: var(--accent); }
+.footer-contact { flex: 1 1 320px; max-width: 560px; }
+.footer-contact h2 { margin: 0 0 8px; color: var(--text); }
+.footer-contact p { margin: 0 0 14px; color: var(--muted); }
+.footer-email {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 2px solid currentColor;
+}
+.footer-email:hover { filter: brightness(1.15); }
+.footer-legal { margin: 20px 0 0; font-size: 0.85rem; }
 
 /* Small screens */
 @media (max-width: 760px) {
